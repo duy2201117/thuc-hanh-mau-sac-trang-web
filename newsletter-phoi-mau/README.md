@@ -1,42 +1,41 @@
-# Bài tập: Phối màu cho Newsletter
+# Bài tập phối màu cho Newsletter
 
-Bài làm gồm **2 phiên bản newsletter** sử dụng **2 bộ màu khác nhau** và Bootstrap 5.3.3.
+## Nội dung
+Bài làm gồm 2 phiên bản newsletter sử dụng Bootstrap 5.3.3 và 2 bộ màu khác nhau.
 
-## Phiên bản 1
+### Phiên bản 1 — Blue / Green
+- Primary: `#0C66E4`
+- Primary Dark: `#0747A6`
+- Secondary: `#172B4D`
+- Accent: `#36B37E`
+- Highlight: `#FFAB00`
+- Cảm nhận: hiện đại, đáng tin cậy, rõ ràng và năng động.
+
 File: `newsletter_version1.html`
 
-Quy tắc phối màu: **Analogous**
+### Phiên bản 2 — Purple / Pink / Orange
+- Primary: `#6D28D9`
+- Primary Dark: `#4C1D95`
+- Secondary: `#111827`
+- Accent: `#EC4899`
+- Highlight: `#F59E0B`
+- Cảm nhận: sáng tạo, trẻ trung, nổi bật và giàu năng lượng.
 
-- #0C66E4
-- #0052CC
-- #6554C0
-- #E9F2FF
-- #172B4D
-
-Cảm nhận: hiện đại, công nghệ, năng động và gần với tinh thần Trello.
-
-## Phiên bản 2
 File: `newsletter_version2.html`
 
-Quy tắc phối màu: **Complementary**
-
-- #0F766E
-- #134E4A
-- #C2410C
-- #CCFBF1
-- #0F172A
-
-Cảm nhận: trầm hơn, chuyên nghiệp hơn, có điểm nhấn ấm từ màu cam đất.
-
-## Kỹ thuật
-- HTML5
-- Bootstrap 5.3.3
-- CSS Variables
-- Responsive layout
-- Hai phiên bản chạy độc lập trên trình duyệt
-
 ## Cách chạy
-Mở trực tiếp một trong hai file HTML bằng trình duyệt:
+1. Giải nén thư mục.
+2. Mở `newsletter_version1.html` hoặc `newsletter_version2.html` bằng Chrome/Edge/Firefox.
+3. Cần kết nối Internet để tải Bootstrap từ CDN.
 
-- `newsletter_version1.html`
-- `newsletter_version2.html`
+## Yêu cầu bài tập đã đáp ứng
+- Có 2 phiên bản newsletter.
+- Hai bộ màu khác nhau rõ rệt.
+- Dùng Bootstrap để xây dựng bố cục responsive.
+- Dùng biến CSS để quản lý màu.
+- Có header, nội dung chính, nút CTA và footer.
+- Đảm bảo độ tương phản chữ/nền ở các vùng chính.
+- Mã HTML/CSS có thể chạy trực tiếp trên trình duyệt.
+
+## Gợi ý nộp bài
+Có thể upload toàn bộ thư mục này lên GitHub hoặc tạo 2 Pen trên CodePen rồi dán link vào phần nộp bài.
