@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newsletter Trello - Phiên bản 1</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root{
+      --primary-color:#0C66E4;
+      --secondary-color:#0052CC;
+      --accent-color:#6554C0;
+      --text-color:#172B4D;
+      --light-bg-color:#E9F2FF;
+      --darker-primary-color:#0747A6;
+      --white:#FFFFFF;
+    }
+    body{background:#F7F9FC;color:var(--text-color);font-family:Arial,Helvetica,sans-serif}
+    .newsletter-shell{max-width:980px;margin:auto}
+    .primary-bg{background:linear-gradient(135deg,var(--primary-color),var(--accent-color))}
+    .secondary-bg{background:var(--secondary-color)}
+    .accent-bg{background:var(--accent-color)}
+    .light-bg{background:var(--light-bg-color)}
+    .text-primary-color{color:var(--primary-color)}
+    .btn-primary-custom{background:var(--primary-color);color:#fff;border-color:var(--primary-color)}
+    .btn-primary-custom:hover{background:var(--darker-primary-color);border-color:var(--darker-primary-color);color:#fff}
+    .logo-badge{width:54px;height:54px;border-radius:14px;background:#fff;color:var(--primary-color);display:grid;place-items:center;font-weight:900;font-size:26px}
+    .hero-card,.feature-card{border:0;border-radius:22px;box-shadow:0 14px 35px rgba(23,43,77,.10)}
+    .hero-card{overflow:hidden}
+    .feature-card{height:100%}
+    .eyebrow{letter-spacing:.13em;font-size:.78rem;font-weight:800}
+    .color-chip{height:72px;border-radius:14px;border:1px solid rgba(0,0,0,.08)}
+    footer{border-radius:18px}
+  </style>
+</head>
+<body>
+  <div class="container py-5 newsletter-shell">
+    <header class="primary-bg text-white p-4 p-md-5 rounded-4 mb-4">
+      <div class="d-flex flex-column flex-md-row align-items-md-center gap-3">
+        <div class="logo-badge">T</div>
+        <div>
+          <div class="eyebrow mb-2">TRELLO WEEKLY • PHIÊN BẢN 1</div>
+          <h1 class="display-5 fw-bold mb-2">Làm việc rõ ràng hơn, tiến nhanh hơn</h1>
+          <p class="lead mb-0">Bản tin tuần này mang đến những mẹo nhỏ giúp đội nhóm sắp xếp công việc trực quan và hiệu quả.</p>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="card hero-card mb-4">
+        <div class="card-body p-4 p-md-5">
+          <div class="row align-items-center g-4">
+            <div class="col-md-7">
+              <span class="badge rounded-pill light-bg text-primary-color mb-3">Mẹo nổi bật</span>
+              <h2 class="fw-bold text-primary-color">Biến kế hoạch thành tiến độ thực tế</h2>
+              <p class="fs-5">Dùng board, list và card để chia mục tiêu lớn thành các bước nhỏ, rõ người phụ trách và thời hạn.</p>
+              <a href="#" class="btn btn-primary-custom btn-lg px-4">Tìm hiểu thêm</a>
+            </div>
+            <div class="col-md-5">
+              <div class="light-bg rounded-4 p-4">
+                <h3 class="h5 fw-bold mb-3">Checklist tuần này</h3>
+                <ul class="mb-0">
+                  <li>Ưu tiên 3 việc quan trọng nhất</li>
+                  <li>Gắn deadline rõ ràng</li>
+                  <li>Review board cuối ngày</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="row g-4 mb-4">
+        <div class="col-md-6">
+          <article class="card feature-card secondary-bg text-white">
+            <div class="card-body p-4">
+              <div class="eyebrow mb-2">TÍNH NĂNG 01</div>
+              <h3 class="card-title">Tự động hóa công việc lặp lại</h3>
+              <p class="card-text">Thiết lập rule để tự gắn nhãn, chuyển card và nhắc deadline mà không cần thao tác thủ công.</p>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-6">
+          <article class="card feature-card accent-bg text-white">
+            <div class="card-body p-4">
+              <div class="eyebrow mb-2">TÍNH NĂNG 02</div>
+              <h3 class="card-title">Nhìn tiến độ theo cách của bạn</h3>
+              <p class="card-text">Kết hợp board, calendar và timeline để theo dõi công việc theo đúng góc nhìn phù hợp với đội nhóm.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="card border-0 rounded-4 mb-4">
+        <div class="card-body p-4">
+          <h3 class="h4 fw-bold mb-3">Bảng màu Adobe Color - Analogous</h3>
+          <div class="row g-3 text-center">
+            <div class="col"><div class="color-chip" style="background:#0C66E4"></div><small>#0C66E4</small></div>
+            <div class="col"><div class="color-chip" style="background:#0052CC"></div><small>#0052CC</small></div>
+            <div class="col"><div class="color-chip" style="background:#6554C0"></div><small>#6554C0</small></div>
+            <div class="col"><div class="color-chip" style="background:#E9F2FF"></div><small>#E9F2FF</small></div>
+            <div class="col"><div class="color-chip" style="background:#172B4D"></div><small>#172B4D</small></div>
+          </div>
+        </div>
+      </section>
+
+      <div class="text-center mb-4">
+        <a href="newsletter_version2.html" class="btn btn-outline-primary">Xem phiên bản 2 →</a>
+      </div>
+    </main>
+
+    <footer class="secondary-bg text-white text-center p-4">
+      <p class="fw-bold mb-1">Trello Weekly Newsletter</p>
+      <p class="mb-0 small">Bài tập phối màu UI/UX • Bootstrap 5.3.3</p>
+    </footer>
+  </div>
+</body>
+</html>
