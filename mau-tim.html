@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Bài thực hành sử dụng màu sắc đơn tông trong trang web" />
+  <title>Thực hành màu sắc - Tông tím</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="theme-purple">
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Trang chủ">
+        <span class="brand-mark">C</span>
+        <span>CODEGYM <small>MONO COLOR</small></span>
+      </a>
+      <nav>
+        <a href="#home">Trang chủ</a>
+        <a href="#courses">Khóa học</a>
+        <a href="#preview">Preview</a>
+        <a href="#palette">Bảng màu</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">BÀI THỰC HÀNH PHỐI MÀU ĐƠN TÔNG</span>
+          <h1>Phiên bản khác với bảng màu đơn tông tím</h1>
+          <p>
+            Trang minh họa sử dụng một màu chủ đạo và các cấp độ nhạt dần của cùng tông màu.
+            Toàn bộ chữ chính giữ màu đen để bảo đảm dễ đọc.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#courses">Xem nội dung</a>
+            <a class="btn btn-ghost" href="#palette">Xem mã HEX</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <span class="sale-badge">ON SALE</span>
+          <h2>Web Design Basics</h2>
+          <p>Thực hành bố cục, màu sắc và khả năng đọc trên trang web.</p>
+          <div class="price">
+            <span class="old-price">599.000đ</span>
+            <strong>299.000đ</strong>
+          </div>
+          <button class="preview-btn" type="button">PREVIEW</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="courses" class="content-section">
+      <div class="container">
+        <div class="section-heading">
+          <span>NỘI DUNG</span>
+          <h2>Áp dụng bảng màu đơn tông</h2>
+          <p>
+            Các khối nội dung dùng nền màu bậc 7; phần ON SALE/PREVIEW dùng màu bậc 1–2;
+            footer dùng màu bậc 9.
+          </p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <div class="card-number">01</div>
+            <h3>Màu chủ đạo</h3>
+            <p>Chọn một màu chính làm màu bậc 1 và phát triển các sắc độ nhạt dần từ màu đó.</p>
+          </article>
+          <article class="card">
+            <div class="card-number">02</div>
+            <h3>Điểm nhấn</h3>
+            <p>Các nhãn ON SALE và PREVIEW dùng màu đậm để tạo tương phản, thu hút sự chú ý.</p>
+          </article>
+          <article class="card">
+            <div class="card-number">03</div>
+            <h3>Khả năng đọc</h3>
+            <p>Nền nội dung dùng màu sáng hơn và chữ màu đen để nội dung rõ ràng, dễ đọc.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="preview" class="promo-section">
+      <div class="container promo">
+        <div>
+          <span class="mini-label">PREVIEW</span>
+          <h2>Phối màu nhất quán trên toàn bộ trang</h2>
+          <p>
+            Đầu trang, nội dung, nút hành động và footer đều sử dụng các sắc độ trong cùng một họ màu.
+          </p>
+        </div>
+        <a class="btn btn-primary" href="#palette">Xem bảng màu</a>
+      </div>
+    </section>
+
+    <section id="palette" class="palette-section">
+      <div class="container">
+        <div class="section-heading">
+          <span>BẢNG MÀU</span>
+          <h2>Tông tím – phiên bản thực hành Bước 8</h2>
+        </div>
+        <div class="palette-grid">
+          <div class="swatch" style="--swatch:#6C5CE7"><div class="swatch-color"></div><strong>Bậc 1</strong><code>#6C5CE7</code></div>
+          <div class="swatch" style="--swatch:#796AE9"><div class="swatch-color"></div><strong>Bậc 2</strong><code>#796AE9</code></div>
+          <div class="swatch" style="--swatch:#9184ED"><div class="swatch-color"></div><strong>Bậc 4</strong><code>#9184ED</code></div>
+          <div class="swatch" style="--swatch:#C2BAF5"><div class="swatch-color"></div><strong>Bậc 7</strong><code>#C2BAF5</code></div>
+          <div class="swatch" style="--swatch:#E4E0FB"><div class="swatch-color"></div><strong>Bậc 9</strong><code>#E4E0FB</code></div>
+        </div>
+        <div class="switch-theme">
+          <a class="btn btn-ghost" href="mau-tim.html">← Quay lại phiên bản tông xanh</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>Bài thực hành: Sử dụng màu sắc trong trang web</strong>
+        <p>Phối màu đơn tông – Monochromatic color scheme.</p>
+      </div>
+      <div class="footer-note">HTML + CSS • Responsive</div>
+    </div>
+  </footer>
+</body>
+</html>
