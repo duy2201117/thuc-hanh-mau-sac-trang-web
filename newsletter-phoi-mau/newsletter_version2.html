@@ -1,115 +1,213 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Newsletter Trello - Phiên bản 2</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trello Newsletter - Phiên bản 2</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    :root{
-      --primary-color:#0F766E;
-      --secondary-color:#134E4A;
-      --accent-color:#C2410C;
-      --text-color:#0F172A;
-      --light-bg-color:#CCFBF1;
-      --warm-bg-color:#FFF7ED;
-      --darker-primary-color:#115E59;
-      --white:#FFFFFF;
+    :root {
+      --primary-color: #6D28D9;
+      --primary-dark: #4C1D95;
+      --secondary-color: #111827;
+      --accent-color: #EC4899;
+      --warm-color: #F59E0B;
+      --surface-color: #FFF7ED;
+      --text-color: #1F2937;
+      --muted-color: #6B7280;
     }
-    body{background:var(--warm-bg-color);color:var(--text-color);font-family:Arial,Helvetica,sans-serif}
-    .newsletter-shell{max-width:980px;margin:auto}
-    .primary-bg{background:linear-gradient(135deg,var(--primary-color),var(--secondary-color))}
-    .secondary-bg{background:var(--secondary-color)}
-    .accent-bg{background:var(--accent-color)}
-    .light-bg{background:var(--light-bg-color)}
-    .text-primary-color{color:var(--primary-color)}
-    .btn-primary-custom{background:var(--primary-color);color:#fff;border-color:var(--primary-color)}
-    .btn-primary-custom:hover{background:var(--darker-primary-color);border-color:var(--darker-primary-color);color:#fff}
-    .logo-badge{width:54px;height:54px;border-radius:14px;background:#fff;color:var(--primary-color);display:grid;place-items:center;font-weight:900;font-size:26px}
-    .hero-card,.feature-card{border:0;border-radius:22px;box-shadow:0 14px 35px rgba(15,23,42,.10)}
-    .feature-card{height:100%}
-    .eyebrow{letter-spacing:.13em;font-size:.78rem;font-weight:800}
-    .accent-panel{background:var(--accent-color);color:#fff;border-radius:18px}
-    .color-chip{height:72px;border-radius:14px;border:1px solid rgba(0,0,0,.08)}
-    footer{border-radius:18px}
+
+    body {
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 10% 10%, rgba(236,72,153,.16), transparent 28%),
+        radial-gradient(circle at 90% 20%, rgba(109,40,217,.17), transparent 32%),
+        #FFF9FC;
+      color: var(--text-color);
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .newsletter-shell {
+      max-width: 980px;
+      margin: 48px auto;
+      background: rgba(255,255,255,.94);
+      border: 1px solid rgba(109,40,217,.10);
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(76,29,149,.12);
+    }
+
+    .hero {
+      position: relative;
+      padding: 68px 42px;
+      color: #fff;
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary-color) 55%, var(--accent-color));
+      overflow: hidden;
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255,255,255,.12);
+    }
+
+    .hero::before { width: 180px; height: 180px; left: -55px; bottom: -80px; }
+    .hero::after { width: 280px; height: 280px; right: -110px; top: -100px; }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      font-size: .78rem;
+      font-weight: 800;
+      opacity: .85;
+    }
+
+    .hero h1 { font-size: clamp(2.1rem, 5vw, 3.8rem); font-weight: 900; line-height: 1.06; }
+    .hero p { max-width: 660px; font-size: 1.07rem; opacity: .94; }
+
+    .cta-btn {
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 999px;
+      background: #fff;
+      color: var(--primary-dark);
+      text-decoration: none;
+      font-weight: 800;
+      transition: .2s ease;
+    }
+
+    .cta-btn:hover { transform: scale(1.03); color: var(--accent-color); }
+
+    .content-wrap { padding: 46px 42px 50px; }
+    .section-title { font-weight: 900; color: var(--secondary-color); }
+    .lead-copy { color: var(--muted-color); }
+
+    .story-card {
+      border: 0;
+      border-radius: 22px;
+      overflow: hidden;
+      height: 100%;
+      box-shadow: 0 12px 30px rgba(17,24,39,.08);
+      background: #fff;
+    }
+
+    .card-top {
+      height: 10px;
+      background: linear-gradient(90deg, var(--primary-color), var(--accent-color), var(--warm-color));
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: .78rem;
+      font-weight: 800;
+      background: #F3E8FF;
+      color: var(--primary-dark);
+    }
+
+    .quote-box {
+      margin-top: 34px;
+      background: var(--surface-color);
+      border-radius: 20px;
+      padding: 28px;
+      border: 1px solid #FED7AA;
+    }
+
+    .quote-mark {
+      font-size: 3rem;
+      line-height: 1;
+      color: var(--accent-color);
+      font-weight: 900;
+    }
+
+    .palette-strip {
+      display: flex;
+      gap: 8px;
+      margin-top: 28px;
+    }
+
+    .swatch { flex: 1; height: 40px; border-radius: 10px; }
+    .s1 { background: var(--primary-dark); }
+    .s2 { background: var(--primary-color); }
+    .s3 { background: var(--accent-color); }
+    .s4 { background: var(--warm-color); }
+    .s5 { background: var(--secondary-color); }
+
+    footer {
+      padding: 30px 42px;
+      background: var(--secondary-color);
+      color: #F9FAFB;
+      text-align: center;
+    }
+
+    @media (max-width: 576px) {
+      .hero, .content-wrap, footer { padding-left: 22px; padding-right: 22px; }
+      .newsletter-shell { margin: 0; border-radius: 0; }
+    }
   </style>
 </head>
 <body>
-  <div class="container py-5 newsletter-shell">
-    <header class="primary-bg text-white p-4 p-md-5 rounded-4 mb-4">
-      <div class="d-flex flex-column flex-md-row align-items-md-center gap-3">
-        <div class="logo-badge">T</div>
-        <div>
-          <div class="eyebrow mb-2">TRELLO WEEKLY • PHIÊN BẢN 2</div>
-          <h1 class="display-5 fw-bold mb-2">Bình tĩnh tổ chức, tự tin hoàn thành</h1>
-          <p class="lead mb-0">Phiên bản màu trầm ấm tạo cảm giác chuyên nghiệp, tập trung và ổn định hơn cho cùng một nội dung newsletter.</p>
-        </div>
-      </div>
+  <main class="newsletter-shell">
+    <header class="hero text-center">
+      <div class="eyebrow mb-3">Trello Creative Update</div>
+      <h1 class="mb-3">Biến ý tưởng thành công việc có thể hành động</h1>
+      <p class="mx-auto mb-4">Một bản tin giàu sắc màu dành cho những nhóm muốn làm việc sáng tạo, rõ ràng và có cảm hứng hơn mỗi ngày.</p>
+      <a class="cta-btn" href="#stories">Xem nội dung mới</a>
     </header>
 
-    <main>
-      <section class="card hero-card mb-4">
-        <div class="card-body p-4 p-md-5">
-          <div class="row align-items-center g-4">
-            <div class="col-md-7">
-              <span class="badge rounded-pill light-bg text-primary-color mb-3">Góc năng suất</span>
-              <h2 class="fw-bold text-primary-color">Tập trung vào công việc thực sự quan trọng</h2>
-              <p class="fs-5">Một hệ thống trực quan giúp bạn giảm nhiễu, thấy rõ ưu tiên và duy trì nhịp làm việc ổn định mỗi ngày.</p>
-              <a href="#" class="btn btn-primary-custom btn-lg px-4">Khám phá ngay</a>
-            </div>
-            <div class="col-md-5">
-              <div class="accent-panel p-4">
-                <h3 class="h5 fw-bold mb-3">Quy tắc 3 việc</h3>
-                <p class="mb-0">Mỗi sáng hãy chọn đúng 3 kết quả quan trọng nhất và đưa chúng lên đầu board để cả ngày không bị phân tán.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="row g-4 mb-4">
-        <div class="col-md-6">
-          <article class="card feature-card secondary-bg text-white">
-            <div class="card-body p-4">
-              <div class="eyebrow mb-2">TÍNH NĂNG 01</div>
-              <h3 class="card-title">Giảm quá tải thông tin</h3>
-              <p class="card-text">Tách dự án thành các nhóm nhỏ và dùng nhãn màu để nhận biết loại công việc chỉ trong vài giây.</p>
-            </div>
-          </article>
-        </div>
-        <div class="col-md-6">
-          <article class="card feature-card accent-bg text-white">
-            <div class="card-body p-4">
-              <div class="eyebrow mb-2">TÍNH NĂNG 02</div>
-              <h3 class="card-title">Tạo điểm nhấn cho hành động chính</h3>
-              <p class="card-text">Màu cam đất được dùng tiết chế cho những vùng cần thu hút chú ý nhưng vẫn giữ tổng thể chuyên nghiệp.</p>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="card border-0 rounded-4 mb-4">
-        <div class="card-body p-4">
-          <h3 class="h4 fw-bold mb-3">Bảng màu Adobe Color - Complementary</h3>
-          <div class="row g-3 text-center">
-            <div class="col"><div class="color-chip" style="background:#0F766E"></div><small>#0F766E</small></div>
-            <div class="col"><div class="color-chip" style="background:#134E4A"></div><small>#134E4A</small></div>
-            <div class="col"><div class="color-chip" style="background:#C2410C"></div><small>#C2410C</small></div>
-            <div class="col"><div class="color-chip" style="background:#CCFBF1"></div><small>#CCFBF1</small></div>
-            <div class="col"><div class="color-chip" style="background:#0F172A"></div><small>#0F172A</small></div>
-          </div>
-        </div>
-      </section>
-
-      <div class="text-center mb-4">
-        <a href="newsletter_version1.html" class="btn btn-outline-success">← Quay lại phiên bản 1</a>
+    <section class="content-wrap" id="stories">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Câu chuyện trong tuần</h2>
+        <p class="lead-copy mb-0">Bộ màu tím – hồng – cam tạo cảm giác sáng tạo, trẻ trung và nổi bật hơn phiên bản thứ nhất.</p>
       </div>
-    </main>
 
-    <footer class="secondary-bg text-white text-center p-4">
-      <p class="fw-bold mb-1">Trello Weekly Newsletter</p>
-      <p class="mb-0 small">Bài tập phối màu UI/UX • Bootstrap 5.3.3</p>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <article class="story-card">
+            <div class="card-top"></div>
+            <div class="p-4 p-lg-5">
+              <span class="pill">PRODUCTIVITY</span>
+              <h3 class="h4 fw-bold mt-3">Tối ưu workflow bằng bảng Kanban</h3>
+              <p class="text-secondary mb-0">Chia công việc thành các trạng thái rõ ràng giúp bạn thấy ngay việc nào đang chờ, đang làm và đã hoàn thành.</p>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-6">
+          <article class="story-card">
+            <div class="card-top"></div>
+            <div class="p-4 p-lg-5">
+              <span class="pill">TEAMWORK</span>
+              <h3 class="h4 fw-bold mt-3">Một không gian chung cho cả nhóm</h3>
+              <p class="text-secondary mb-0">Tập trung nhiệm vụ, deadline và trao đổi trong một nơi giúp giảm bỏ sót và hạn chế thông tin rời rạc.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="quote-box">
+        <div class="quote-mark">“</div>
+        <p class="fs-5 mb-2">Màu sắc không chỉ để trang trí — nó còn quyết định cảm xúc, điểm nhấn và cách người dùng ưu tiên thông tin.</p>
+        <small class="text-secondary">Ghi chú thực hành UI/UX</small>
+      </div>
+
+      <div class="palette-strip" aria-label="Bảng màu phiên bản 2">
+        <div class="swatch s1" title="#4C1D95"></div>
+        <div class="swatch s2" title="#6D28D9"></div>
+        <div class="swatch s3" title="#EC4899"></div>
+        <div class="swatch s4" title="#F59E0B"></div>
+        <div class="swatch s5" title="#111827"></div>
+      </div>
+    </section>
+
+    <footer>
+      <strong>Trello Creative Update</strong>
+      <div class="small mt-1 opacity-75">© 2026 Newsletter thực hành phối màu UI/UX.</div>
     </footer>
-  </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
